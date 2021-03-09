@@ -1,0 +1,79 @@
+//
+
+    public class Vehicle { // creation of parent class Vehicle
+        //Definition of attributes of the parent class
+        String owner;
+        int wheels;
+
+        public String getOwner() {  //getter for the owner attribute
+            return owner;
+        }
+
+        public void setOwner(String owner) { // setter for the owner attribute
+            this.owner = owner;
+        }
+
+        public int getWheels() {   //getter for the wheels attribute
+            return wheels;
+        }
+
+        public void setWheels(int wheels) {  // setter for the wheels attribute
+            this.wheels = wheels;
+        }
+    }
+class Cars extends Vehicle  {  // use of the inherintance property to extend fields from the parent class
+    String VehicleRegistrationNumber;
+    int wheels=4;
+
+    public String getVehicleRegistrationNumber() { //getter for the Vehicle registration number
+        return VehicleRegistrationNumber;
+    }
+
+    public void setVehicleRegistrationNumber(String vehicleRegistrationNumber) {
+        VehicleRegistrationNumber = vehicleRegistrationNumber;
+    }
+
+}
+// use of the inherintance property to extend fields from the parent class
+class Lorries extends Vehicle{
+    String VehicleRegistrationNumber;
+    int wheels=6;
+
+    public String getVehicleRegistrationNumber() {
+        return VehicleRegistrationNumber;
+    }
+
+    public void setVehicleRegistrationNumber(String vehicleRegistrationNumber) {
+        VehicleRegistrationNumber = vehicleRegistrationNumber;
+    }
+
+}
+// use of the inheritance property to extend fields from the parent class
+class Bicycle extends Vehicle{
+    int wheels=2;  // attributes of the Bicycle class
+
+}
+
+// TEST CODE
+
+public class VehicleTest {
+    public static void main(String[] args) {  // main driver of the program
+        System.out.println();
+        Cars CarONE = new Cars();  // instantiation of the Car class
+
+        // instantiation of the Lorries class
+        Lorries LorryONE = new Lorries();
+        LorryONE.wheels = 6;
+
+        // // instantiation of the Bicycle class
+        Bicycle BicycleONE = new Bicycle();
+        BicycleONE.wheels = 2;
+
+        //code below displays the number of wheels of each object
+        System.out.println("Cars have " + CarONE.wheels + " wheels");
+        System.out.println("lorries have " + LorryONE.wheels + " wheels");
+        System.out.println("Bicycles have " + BicycleONE.wheels + " wheels");
+
+
+    }
+}
